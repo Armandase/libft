@@ -1,30 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 14:52:48 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/28 18:03:55 by adamiens         ###   ########.fr       */
+/*   Created: 2022/07/22 11:04:19 by adamiens          #+#    #+#             */
+/*   Updated: 2022/09/28 18:03:26 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*strdup(const char *s)
 {
-	size_t	i;
-	char	*tmp;
-	char	*ret;
+	int		size;
+	char	*str;
 
-	tmp = (char *)src;
-	ret = (char *)dest;
-	i = 0;
-	while (i < n)
+	size = 0;
+	while (s[size] != '\0')
+		size++;
+	str = (char *) malloc(sizeof(char) * size + 1);
+	if (!str)
+		return (NULL);
+	size = 0;
+	while (s[size] != '\0')
 	{
-		ret[i] = tmp[i];
-		i++;
+		str[size] = s[size];
+		size++;
 	}
-	return (dest);
+	str[size] = '\0';
+	return (str);
 }

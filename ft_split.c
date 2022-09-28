@@ -1,30 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 14:52:48 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/28 18:03:55 by adamiens         ###   ########.fr       */
+/*   Created: 2022/09/28 16:46:28 by adamiens          #+#    #+#             */
+/*   Updated: 2022/09/28 16:57:09 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int	ft_strlen(char const *s1, char const *s2)
 {
-	size_t	i;
-	char	*tmp;
-	char	*ret;
+	int	i;
+	int	j;
+	int counter;
+	int	sub;
 
-	tmp = (char *)src;
-	ret = (char *)dest;
+	counter = 0;
 	i = 0;
-	while (i < n)
+	sub = 0;
+	while (s1[i])
 	{
-		ret[i] = tmp[i];
-		i++;
+		j = 0;
+		while (s2[j])
+		{
+			if (s1[i] == s2[j])
+				sub++;
+		}
 	}
-	return (dest);
+}
+
+char *ft_split(char const *s1, char const *set)
+{
+	char	*str;
+	int		i;
+	int		j;
+
+	i = 0;
+	while (s1[i])
+	{
+		j = 0;
+		while (set[j])
+		{
+			if (s1[i] == set[j])
+		}
+	}
 }
