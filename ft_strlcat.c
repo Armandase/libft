@@ -6,23 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:16:43 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/27 18:07:44 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:44:42 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-	{
-		i++;
-	}
-	return (i);
-}
+#include "libft.a"
 
 size_t	ft_strlcat(char	*dest, char	*src, size_t	size)
 {

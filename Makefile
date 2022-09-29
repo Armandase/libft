@@ -18,7 +18,7 @@ ${NAME}:${OBJS}
 all:	${NAME}
 
 clean:
-	rm -f
+	rm -f *.o
 fclean : clean
 	rm ${NAME}
 re:

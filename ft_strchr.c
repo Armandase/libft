@@ -6,9 +6,11 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:50:54 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/27 11:40:08 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:43:05 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.a"
 
 char	*ft_strchr(const char *s, int c)
 {

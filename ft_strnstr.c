@@ -6,21 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 14:10:37 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/27 17:55:33 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:46:39 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.a"
 #include <stddef.h>
-
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
 
 int	ft_check(char *s1, char *s2, int i)
 {

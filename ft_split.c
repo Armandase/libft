@@ -6,11 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:46:28 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:15:43 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:42:44 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "libft.a"
 
 int	ft_totalen(char const *s, char c)
 {

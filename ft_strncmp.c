@@ -6,11 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 11:42:28 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/27 13:43:07 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:45:51 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
+#include "libft.a"
 
 int	strncmp(const char *s1, const char *s2, size_t n)
 {
