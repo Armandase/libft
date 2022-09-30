@@ -6,14 +6,14 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 12:10:41 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:55:32 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:13:45 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 #include "libft.h"
 
-static size_t	ft_strlen(const char	*s)
+static size_t	ft_strsize(const char	*s)
 {
 	int i;
 	i = 0;
@@ -26,7 +26,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t	size)
 {
 	size_t	lensrc;
 
-	lensrc = ft_strlen(src);
+	lensrc = ft_strsize(src);
 	while(size-- && *src)
 		*dst++ = *src++;
 	return (lensrc);

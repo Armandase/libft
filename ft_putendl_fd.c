@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:57:12 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 09:58:56 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:11:08 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ void	ft_putendl_fd(char *s, int fd)
 	int	i;
 
 	i = 0;
-	if (fd == 0)
-		return (0);
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

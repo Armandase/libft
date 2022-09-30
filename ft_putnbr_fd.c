@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/14 10:48:14 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 10:03:44 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:12:11 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_putchar(char c, int fd)
 
 void	ft_putnbr_fd(int nb, int fd)
 {
-	if (fd == 0)
-		return (0);
 	if (nb == -2147483648)
 	{
 		ft_putchar('-', fd);
@@ -34,7 +32,7 @@ void	ft_putnbr_fd(int nb, int fd)
 	}	
 	if (nb > 9)
 	{
-		ft_putnbr_fd(nb / 10);
+		ft_putnbr_fd(nb / 10, fd);
 	}
 	ft_putchar((nb % 10) + '0', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:40:24 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 09:50:17 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:15:16 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ret;
 
 	i = 0;
-	ret = malloc(ft_strlen(s) + 1);
+	ret = malloc(ft_strlen((char *)s) + 1);
 	if (!ret)
 		return (0);
 	while (ret[i] != '\0')
@@ -26,4 +26,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		ret[i] = f(i, ret[i]);
 		i++;
 	}
+	return (ret);
 }

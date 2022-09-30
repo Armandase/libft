@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 09:46:57 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 09:50:04 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:12:48 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != '\0')
 	{
-		f(i, &str[i]);
+		f(i, &s[i]);
 		i++;
 	}
 }
