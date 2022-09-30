@@ -1,42 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 14:59:11 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 13:00:32 by adamiens         ###   ########.fr       */
+/*   Created: 2022/09/30 12:26:22 by adamiens          #+#    #+#             */
+/*   Updated: 2022/09/30 12:31:33 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
-	size_t		i;
-	char		*tmp;
-	const char	*cast;
+	size_t	i;
+	char	*ret;
 
-	tmp = (char *)dest;
-	cast = (char *)src;
+	if (nmemb == 0 || size == 0)
+		return (0);
+	if ((nmemb * size) > 2147483647)
+		return (0);
 	i = 0;
-	if (dest < src)
-	{
-		while (i < n)
-		{
-			tmp[i] = cast[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = n;
-		while (i--)
-		{
-			tmp[i] = cast[i];
-		}
-	}
-	return ((void *)dest);
+	ret = malloc(nmemb * size);
+	while (i < nmemb)
+		ret[i++] = 0;
+	return ((void *)ret);
 }
