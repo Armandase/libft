@@ -6,14 +6,14 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:58:04 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 10:16:44 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:40:20 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-int	ft_inset (char const *set, char c)
+int	ft_inset(char const *set, char c)
 {
 	int	i;
 
@@ -45,11 +45,11 @@ int	ft_begin(char const *s1, char const *set)
 	return (j);
 }
 
-int	ft_end (char const *s1, char const *set)
+int	ft_end(char const *s1, char const *set)
 {
 	int	i;
 	int	j;
-	
+
 	i = 0;
 	j = ft_strlen((char *)s1) - 1;
 	while (i < j)
@@ -58,12 +58,12 @@ int	ft_end (char const *s1, char const *set)
 			i++;
 		else
 			return (i);
-		j--;	
+		j--;
 	}
 	return (i);
 }
 
-char *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	char	*str;

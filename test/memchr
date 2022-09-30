@@ -1,9 +1,0 @@
-#include <string.h>
-#include <stdio.h>
-int main(void)
-{
-    const char  str[] = "c'est vraiment un test";
-    printf("%s", (char *)ft_memchr(str, 's', 3));
-    printf("\n%s", (char *)memchr(str, 's', 3));
-    return (0);
-}

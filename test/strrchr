@@ -1,9 +1,0 @@
-#include <string.h>
-#include <stdio.h>
-int main(void)
-{
-    const char  str[] = "Armand c'est vraiment un giga bg";
-    printf("%s\n%s", ft_strrchr(str, '\''), strrchr(str, '\''));
-    return (0);
-}
-

@@ -1,7 +1,0 @@
-include <stdio.h>
- 36 #include <string.h>
- 37 int main ()
- 38 {   
- 39     printf("%d\n%d", ft_memcmp("test1", "test2", 50), memcmp("test1", "test2", 15));
- 40 }
-

@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:46:28 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:54:44 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:17:41 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,17 +71,4 @@ char	**ft_split(char const *s, char c)
 	}
 	strs[k] = 0;
 	return (strs);
-}
-#include <stdio.h>
-int main(int argc, char **argv)
-{
-    (void)argc;
-    char    **strs;
-    int j = ft_totalen(argv[1], argv[2][0]);
-    strs = ft_split(argv[1], argv[2][0]);
-    for(int i = 0; i < j; i++)
-    {
-        printf("%s\n", strs[i]);
-    }
-    return (0);
 }

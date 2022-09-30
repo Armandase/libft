@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:16:43 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:55:23 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 10:17:55 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,22 +32,4 @@ size_t	ft_strlcat(char	*dest, char	*src, size_t	size)
 	}
 	dest[i] = '\0';
 	return (lendest + lensrc);
-}
-#include <stdio.h>
-#include <bsd/string.h>
-#include <string.h>
-int main()
-{
-	char src[] = "debut";
-	char dest[50] = "fingure";
-	size_t size = 7;
-	char src1[] = "debut";
-	char dest1[50] = "fingure";
-	size_t size1 = 7;
-
-    // Affiche : "debutfin"
-	printf("%ld", ft_strlcat(dest, src, size));
-	printf("%ld", strlcat(dest1, src1, size1));
-	
-	return 0;
 }
