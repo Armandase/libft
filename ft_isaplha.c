@@ -6,11 +6,11 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:16:30 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:36:15 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:53:34 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {

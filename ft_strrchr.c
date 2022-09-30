@@ -6,11 +6,11 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 11:15:02 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:47:08 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:56:01 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {

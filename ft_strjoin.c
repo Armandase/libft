@@ -6,12 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:32:15 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:44:03 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:55:16 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.a"
+#include "libft.h"
 
 int	ft_strdoublelen(char const *s1, char const *s2)
 {

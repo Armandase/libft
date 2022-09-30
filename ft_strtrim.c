@@ -6,13 +6,13 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:58:04 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:48:29 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:56:06 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stdio.h>
-#include "libft.a"
+#include "libft.h"
 
 int	ft_inset (char const *set, char c)
 {

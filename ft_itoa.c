@@ -6,13 +6,13 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:01:26 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:39:52 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:54:02 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <stddef.h>
-#include "libft.a"
+#include "libft.h"
 
 int	ft_lenint(int n)
 {

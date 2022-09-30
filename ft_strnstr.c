@@ -6,11 +6,11 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 14:10:37 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:46:39 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:55:53 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.a"
+#include "libft.h"
 #include <stddef.h>
 
 int	ft_check(char *s1, char *s2, int i)

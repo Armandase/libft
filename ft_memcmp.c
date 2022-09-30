@@ -6,12 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 13:43:54 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:40:47 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:54:15 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.a"
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

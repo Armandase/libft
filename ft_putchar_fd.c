@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 14:33:01 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:53:55 by adamiens         ###   ########.fr       */
+/*   Created: 2022/09/30 09:50:57 by adamiens          #+#    #+#             */
+/*   Updated: 2022/09/30 09:53:49 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-int	ft_isprint(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if ((c >= ' ' && c <= '~'))
-		return (c);
-	return (0);
+	if (fd == 0)
+		return (0);
+	write(fd, &c, 1);
 }

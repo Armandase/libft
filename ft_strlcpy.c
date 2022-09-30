@@ -6,12 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/16 12:10:41 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:45:07 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:55:32 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
-#include "libft.a"
+#include "libft.h"
 
 static size_t	ft_strlen(const char	*s)
 {

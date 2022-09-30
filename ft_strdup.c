@@ -6,12 +6,12 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 11:04:19 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:43:27 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/29 17:55:08 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.a"
+#include "libft.h"
 
 char	*strdup(const char *s)
 {

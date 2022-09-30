@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 14:33:01 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:53:55 by adamiens         ###   ########.fr       */
+/*   Created: 2022/09/30 09:40:24 by adamiens          #+#    #+#             */
+/*   Updated: 2022/09/30 09:50:17 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	if ((c >= ' ' && c <= '~'))
-		return (c);
-	return (0);
+	unsigned int	i;
+	char			*ret;
+
+	i = 0;
+	ret = malloc(ft_strlen(s) + 1);
+	if (!ret)
+		return (0);
+	while (ret[i] != '\0')
+	{
+		ret[i] = f(i, ret[i]);
+		i++;
+	}
 }
