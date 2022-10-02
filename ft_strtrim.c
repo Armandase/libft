@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:58:04 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 19:22:39 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/02 11:30:51 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,5 +80,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		str[i] = s1[start + i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }

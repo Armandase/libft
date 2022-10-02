@@ -6,26 +6,29 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:01:26 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:54:02 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/02 13:01:10 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
 #include "libft.h"
 
 int	ft_lenint(int n)
 {
-	int	i;
+	int		i;
+	long	number;
 
 	i = 1;
+	number = n;
 	if (n < 0)
-		i++;
-	if (n < 10)
-		return (i);
-	while (n > 10)
 	{
-		n /= 10;
+		i++;
+		number *= -1;
+	}
+	if (number < 10)
+		return (i);
+	while (number >= 10)
+	{
+		number /= 10;
 		i++;
 	}
 	return (i);
@@ -33,20 +36,22 @@ int	ft_lenint(int n)
 
 char	*ft_negative(int n, char *ret, int nlen)
 {
-	int	counter;
-	
-	counter = -1;
+	int		counter;
+	long	i;
+
+	counter = 0;
 	if (n == 0)
 	{
 		ret[0] = '0';
 		return (ret);
 	}
-	n *= -1;
+	i = (long)n;
+	i *= -1;
 	ret[0] = '-';
-	while (n > 0)
+	while (i > 0)
 	{
-		ret[(nlen - 1) - counter] = n % 10 + '0';
-		n /= 10;
+		ret[(nlen - 1) - counter] = i % 10 + '0';
+		i /= 10;
 		counter++;
 	}
 	return (ret);
@@ -55,7 +60,7 @@ char	*ft_negative(int n, char *ret, int nlen)
 char	*ft_itoa(int n)
 {
 	size_t	i;
-	int 	counter;
+	int		counter;
 	char	*ret;
 	int		nlen;
 
@@ -66,22 +71,15 @@ char	*ft_itoa(int n)
 	if (n <= 0)
 	{
 		ret = ft_negative(n, ret, nlen);
+		ret[nlen] = '\0';
 		return (ret);
 	}
-	while (i > 0)	
+	while (i > 0)
 	{
 		ret[(nlen - 1) - counter] = i % 10 + '0';
 		counter++;
 		i /= 10;
 	}
+	ret[nlen] = '\0';
 	return (ret);
-}
-
-#include <stdio.h>
-int main ()
-{
-	char *co;
-	int te = -27483648;
-	co = ft_itoa(te);
-	printf("%s", co);
 }
