@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:52:48 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:54:23 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 14:56:35 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	tmp = (char *)src;
 	ret = (char *)dest;
 	i = 0;
+	if ((!dest && !src) && n)
+		return (0);
 	while (i < n)
 	{
 		ret[i] = tmp[i];

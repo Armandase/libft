@@ -6,14 +6,14 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/22 11:04:19 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:55:08 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 14:19:03 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	int		size;
 	char	*str;

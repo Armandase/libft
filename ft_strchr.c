@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 10:50:54 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:54:53 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 15:05:25 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&s[i]);
 		i++;
 	}
+	if (s[i] == '\0' && c == 0)
+		return ((char *)&s[i]);
 	return (0);
 }

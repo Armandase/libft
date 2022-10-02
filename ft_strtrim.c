@@ -6,11 +6,10 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:58:04 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 10:40:20 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/09/30 19:22:39 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 int	ft_inset(char const *set, char c)
@@ -51,7 +50,7 @@ int	ft_end(char const *s1, char const *set)
 	int	j;
 
 	i = 0;
-	j = ft_strlen((char *)s1) - 1;
+	j = (int)ft_strlen((char *)s1) - 1;
 	while (i < j)
 	{
 		if (ft_inset(set, s1[j]) == 1)
@@ -76,7 +75,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = ft_end(s1, set);
 	j = ft_strlen((char *)s1) - (ft_begin(s1, set) + ft_end(s1, set));
 	str = malloc(sizeof(char) * j + 1);
-	while (i < j && (start + i) < (ft_strlen((char *)s1) - end))
+	while (i < j && (start + i) < ((int)ft_strlen((char *)s1) - end))
 	{
 		str[i] = s1[start + i];
 		i++;
