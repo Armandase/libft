@@ -6,11 +6,10 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:52:48 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 14:56:35 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:34:25 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

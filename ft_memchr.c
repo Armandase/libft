@@ -6,20 +6,21 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 11:46:14 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/29 17:54:08 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:13:44 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	const char	*tmp;
-	size_t		i;
+	char	*tmp;
+	size_t	i;
 
 	i = 0;
-	tmp = s;
+	tmp = (char *)s;
+	while (c > 255)
+		c -= 256;
 	while (i < n)
 	{
 		if (tmp[i] == c)

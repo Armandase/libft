@@ -6,13 +6,13 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:16:43 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/03 11:49:24 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:01:18 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char	*dest, char	*src, size_t size)
+size_t	ft_strlcat(char	*dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	lendest;

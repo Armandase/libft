@@ -25,9 +25,6 @@ $(NAME): ${OBJS}
 
 bonus:${OBJS} ${OBJS_BONUS}
 	ar -rc ${NAME} ${OBJS} ${OBJS_BONUS}
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(SRCS_BONUS)
-	gcc -nostartfiles -shared -o libft.so $(OBJS) $(OBJS_BONUS)
 .c.o:
 	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 clean:

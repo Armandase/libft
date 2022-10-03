@@ -6,12 +6,11 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:59:11 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/03 14:25:20 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:35:51 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

@@ -6,13 +6,13 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:58:04 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/03 14:00:32 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:04:21 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_inset(char const *set, char c)
+static int	ft_inset(char const *set, char c)
 {
 	int	i;
 
@@ -26,7 +26,7 @@ int	ft_inset(char const *set, char c)
 	return (0);
 }
 
-int	ft_begin(char const *s1, char const *set)
+static int	ft_begin(char const *s1, char const *set)
 {
 	int		i;
 	int		j;
@@ -44,7 +44,7 @@ int	ft_begin(char const *s1, char const *set)
 	return (j);
 }
 
-int	ft_end(char const *s1, char const *set)
+static int	ft_end(char const *s1, char const *set)
 {
 	int	i;
 	int	j;

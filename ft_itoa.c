@@ -6,13 +6,13 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:01:26 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/03 12:00:46 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 18:49:01 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lenint(int n)
+static int	ft_lenint(int n)
 {
 	int		i;
 	long	number;
@@ -34,7 +34,7 @@ int	ft_lenint(int n)
 	return (i);
 }
 
-char	*ft_negative(int n, char *ret, int nlen)
+static char	*ft_negative(int n, char *ret, int nlen)
 {
 	int		counter;
 	long	i;

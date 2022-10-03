@@ -6,19 +6,23 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:46:28 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/03 15:16:46 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 17:51:46 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_totalen(char const *s, char c)
+static int	ft_totalen(char const *s, char c)
 {
 	int	i;
 	int	counter;
 
 	counter = 1;
 	i = 0;
+	while (s[i] == c && s[i])
+		i++;
+	if (i == (int)ft_strlen(s) || i + 1 == (int)ft_strlen(s))
+		return (0);
 	while (s[i])
 	{
 		if (s[i] == c)
@@ -34,7 +38,7 @@ int	ft_totalen(char const *s, char c)
 	return (counter);
 }
 
-int	ft_wordlen(const char *str, char c, int i)
+static int	ft_wordlen(const char *str, char c, int i)
 {
 	int	counter;
 
@@ -44,7 +48,7 @@ int	ft_wordlen(const char *str, char c, int i)
 	return (counter);
 }
 
-int	ft_skip(const char *s, char c, int i)
+static int	ft_skip(const char *s, char c, int i)
 {
 	int	ret;
 
