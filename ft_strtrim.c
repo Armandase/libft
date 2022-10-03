@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:58:04 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 11:30:51 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 14:00:32 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,18 +64,22 @@ int	ft_end(char const *s1, char const *set)
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int		i;
+	size_t	i;
 	char	*str;
-	int		j;
-	int		start;
-	int		end;
+	size_t	j;
+	size_t	start;
 
+	if (!s1 || !set)
+		return (NULL);
 	i = 0;
+	j = 0;
 	start = ft_begin(s1, set);
-	end = ft_end(s1, set);
-	j = ft_strlen((char *)s1) - (ft_begin(s1, set) + ft_end(s1, set));
-	str = malloc(sizeof(char) * j + 1);
-	while (i < j && (start + i) < ((int)ft_strlen((char *)s1) - end))
+	if (start != ft_strlen(s1))
+		j = ft_strlen(s1) - (ft_begin(s1, set) + ft_end(s1, set));
+	str = malloc(j + 1);
+	if (!str)
+		return (NULL);
+	while (i < j)
 	{
 		str[i] = s1[start + i];
 		i++;

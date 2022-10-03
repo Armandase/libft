@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 14:01:26 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 13:01:10 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 12:00:46 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ char	*ft_itoa(int n)
 
 	nlen = ft_lenint(n);
 	ret = malloc(nlen + 1);
+	if (!ret)
+		return (NULL);
 	counter = 0;
 	i = n;
 	if (n <= 0)

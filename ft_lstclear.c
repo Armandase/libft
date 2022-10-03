@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 13:16:15 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 13:16:18 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 11:56:56 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*tmp;
 	t_list	*tofree;
 
+	if (!lst || !del)
+		return ;
 	tmp = *lst;
 	while (tmp)
 	{

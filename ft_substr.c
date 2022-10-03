@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:16:46 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 11:04:13 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 14:21:46 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	size_t	counter;
 
+	if (!len || !s)
+		return (ft_calloc(1, 1));
+	if (start >= ft_strlen(s))
+		return (ft_calloc(1, 1));
 	i = 0;
 	counter = 0;
-	if (len == 0 || start >= ft_strlen(s))
-		return (0);
 	while (i < start)
 		i++;
 	str = malloc(len + 1);

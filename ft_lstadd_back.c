@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 13:15:59 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 13:16:06 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 11:31:48 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	tmp = *lst;
-	if (!tmp)
-		tmp = new;
+	if (!new)
+		return ;
+	else if (!(*lst))
+		*lst = new;
 	else
 	{
+		tmp = *lst;
 		while (tmp->next != NULL)
 			tmp = tmp->next;
 		tmp->next = new;

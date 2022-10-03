@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 14:59:11 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 13:00:32 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 14:25:20 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	tmp = (char *)dest;
 	cast = (char *)src;
 	i = 0;
+	if (n && !dest && !src)
+		return ((void *)dest);
 	if (dest < src)
 	{
 		while (i < n)
@@ -34,9 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	{
 		i = n;
 		while (i--)
-		{
 			tmp[i] = cast[i];
-		}
 	}
 	return ((void *)dest);
 }

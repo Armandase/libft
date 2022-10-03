@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:32:15 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 11:08:11 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 14:15:12 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (0);
 	i = ft_strdoublelen(s1, s2);
 	str = malloc (i + 1);
 	if (!str)
@@ -43,11 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	j = 0;
 	while (s1[j])
-	{
-		str[i] = s1[j];
-		j++;
-		i++;
-	}
+		str[i++] = s1[j++];
 	j = 0;
 	while (s2[j])
 	{

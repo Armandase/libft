@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 13:16:25 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/02 14:57:39 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 11:03:22 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		ret->next = malloc(sizeof(t_list));
 		if (!ret->next)
+		{
 			ft_lstclear(&begin, del);
+			return (begin);
+		}
 		ret->content = f(lst->content);
 		ret = ret->next;
 		lst = lst->next;

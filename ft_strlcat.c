@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/18 10:16:43 by adamiens          #+#    #+#             */
-/*   Updated: 2022/09/30 14:48:22 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 11:49:24 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlcat(char	*dest, char	*src, size_t size)
 
 	lendest = 0;
 	lensrc = ft_strlen(src);
+	if (size == 0 && (!dest || !src))
+		return (0);
 	while (dest[lendest] != '\0' && lendest < size)
 		lendest++;
 	if (dest[lendest])
