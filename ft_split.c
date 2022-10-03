@@ -6,7 +6,7 @@
 /*   By: adamiens <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 16:46:28 by adamiens          #+#    #+#             */
-/*   Updated: 2022/10/03 14:32:42 by adamiens         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:16:46 by adamiens         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,39 +44,41 @@ int	ft_wordlen(const char *str, char c, int i)
 	return (counter);
 }
 
-char	*ft_strccopy(char *dest, char c, char *src, int index)
+int	ft_skip(const char *s, char c, int i)
 {
-	
+	int	ret;
+
+	ret = 0;
+	while (s[i + ret] == c)
+		ret++;
+	return (ret);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	int		i;
-	int		j;
-	int		k;
+	int		ijk[3];
 
 	if (!s)
 		return (NULL);
 	strs = malloc(sizeof(char *) * (ft_totalen(s, c) + 1));
 	if (!strs)
 		return (NULL);
-	i = 0;
-	k = 0;
-	while (s[i])
+	ijk[0] = 0;
+	ijk[2] = 0;
+	while (s[ijk[0]])
 	{
-		j = 0;
-		while (s[i] == c)
-			i++;
-		if (s[i] == '\0')
+		ijk[1] = 0;
+		ijk[0] += ft_skip(s, c, ijk[0]);
+		if (s[ijk[0]] == '\0')
 			break ;
-		strs[k] = malloc(ft_wordlen(s, c, i) + 1);
-		if (!strs[k])
+		strs[ijk[2]] = malloc(ft_wordlen(s, c, ijk[0]) + 1);
+		if (!strs[ijk[2]])
 			return (NULL);
-		while (s[i] != c && s[i])
-			strs[k][j++] = s[i++];
-		strs[k++][j] = '\0';
+		while (s[ijk[0]] != c && s[ijk[0]])
+			strs[ijk[2]][ijk[1]++] = s[ijk[0]++];
+		strs[ijk[2]++][ijk[1]] = '\0';
 	}
-	strs[k] = NULL;
+	strs[ijk[2]] = NULL;
 	return (strs);
 }
